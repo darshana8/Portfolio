@@ -24,6 +24,9 @@ span{
     box-shadow: none;
 }
 
+.services{
+    min-height: 100vh
+}
 .services  h2{
     margin-bottom: 5rem;
 }

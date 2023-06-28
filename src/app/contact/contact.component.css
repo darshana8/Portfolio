@@ -24,6 +24,10 @@ span{
     box-shadow: none;
 }
 
+.contact{
+    min-height: 100vh
+}
+
 .contact h2{
     margin-bottom: 3rem;
 }
