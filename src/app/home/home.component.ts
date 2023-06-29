@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuItem } from '../menu-item';
 
+declare var typed: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -30,4 +31,8 @@ export class HomeComponent {
     },
   
   ];
+
+  ngOnInit(){
+    new typed()
+  }
 }

@@ -59,6 +59,13 @@ section{
 .home-img img{
     width: 25vw;
     margin-bottom: 150px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%   { transform: translateY(-8%); };
+    50%  {transform: translateY(-2.4rem)};
+    100% { transform: translateY(0); }
 }
 
 .home-content h3{
@@ -71,9 +78,73 @@ section{
 margin-bottom: 2rem;
 }
 
-span{
+.span{
     color: var(--main-color);
 }
+
+.wrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    /* background: salmon; */
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+  }
+  .wrapper .static-txt {
+    color: #fff;
+    font-size: 50px;
+  }
+  .wrapper .dynamic-txts {
+
+
+    margin-left: 15px;
+    height: 70px;
+    line-height: 60px;
+    overflow: hidden;
+    font-size: 60px;
+  }
+  .dynamic-txts li {
+    
+    color: var(--main-color);
+    list-style: none;
+    font-size: 70px;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+  }
+  @keyframes slide {
+    100% {
+      top: -280px;
+    }
+  }
+  .dynamic-txts li span {
+    
+    position: relative;
+  }
+  .dynamic-txts li span::after {
+    position: relative;
+/* border: groove; */
+    content: "";
+    position: absolute;
+    left: 0;
+    top:5%;
+    height: 100%;
+    width: 100%;
+   background-color: var(--bg-color);
+    border-left: 2px solid var(--main-color);
+    animation: typing 1.5s steps(10) infinite;
+  }
+  @keyframes typing {
+    100% {
+      left: 100%;
+      margin: 0 -35px 0 35px;
+    }
+  }
 
 .home-content h1{
     font-size: 5.6rem;
@@ -122,5 +193,33 @@ box-shadow:  0 0 2rem var(--main-color);
 .btn:hover{
     box-shadow: none;
 }
+/* This changes all the animations globally */
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
 
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    .home{
+        flex-direction: column;
+    }
+
+    .home-content .h3{
+        font-size: 2.6rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 50vw;
+        margin-top: 4rem;
+    }
+
+    .dynamic-txts li {
+        font-size: 55px;
+    }
+}
 

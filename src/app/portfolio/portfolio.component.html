@@ -1,20 +1,66 @@
+<mat-toolbar fxLayout="row" class="header">
+    <span fxFlex class="logo">Portfolio</span>
+    <button style="font-size: 2.5rem;color: var(--text-color);margin-left: 4rem;transition: .3s;" mat-button  fxHide.xs>
+        <a class= "navbar" routerLink="">Home</a>
+        <a class= "navbar" routerLink="about">About</a>
+        <a class= "navbar" routerLink="services">Services</a>
+        <a class= "navbar" routerLink="portfolio">Portfolio</a>
+        <a class= "navbar" routerLink="contact">Contact</a>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+      <mat-icon style="color: white;">more_vert</mat-icon>
+    </button>
+    <mat-menu #dropMenu="matMenu"  style="border: 1px solid red;">
+      <ng-container >
+        <button mat-menu-item >
+            <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" routerLink=" "> -->
+            <!-- </mat-icon> -->
+                <a  class= "navbar" routerLink=" "style="color: black;font-weight: 700;">Home</a>
+        </button>
+        <button mat-menu-item>
+            <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="help" routerLink="about"></mat-icon> -->
+                <a  class= "navbar" routerLink="about"style="color: black;font-weight: 700;">About</a>
+        </button>
+
+        <button mat-menu-item>
+            <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="how_to_reg" routerLink="services"></mat-icon> -->
+                <a  class= "navbar" routerLink="services"style="color: black;font-weight: 700;">Services</a>
+        </button>
+
+        
+
+        <button mat-menu-item>
+            <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person_pin" routerLink="portfolio"></mat-icon> -->
+                <a  class= "navbar" routerLink="portfolio" style="color: black;font-weight: 700;">Portfolio</a>
+        </button>
+
+        <button mat-menu-item>
+            <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="contacts" routerLink="contact"></mat-icon> -->
+                <a  class= "navbar" routerLink="contact" style="color: black;font-weight: 700;">Contact</a>
+        </button>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-menu>
+  </mat-toolbar>
+
 <section class="portfolio body" id="portfolio">
-<h2 class="heading">Latest <span style="font-size: 45px;"> Project</span></h2>
+<h2 class="heading animate__animated animate__fadeInDown">Latest <span style="font-size: 45px;"> Project</span></h2>
 
 <div class="portfolio-container">
-<div class="portfolio-box">
+<div class="portfolio-box animate__animated animate__fadeInUp">
     <img src="../../assets/portfolio1.jpg" alt="">
     <div class="portfolio-layer">
-        <h4>Web Design</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit nostrum totam hic temporibus iusto, iste animi exercitationem voluptatibus, tempore in quasi accusamus perferendis rerum laboriosam quae tempora ducimus eaque?</p>
+        <h4>Chatting Application</h4>
+        <p>
+            The Chatting App project is a web application developed using the Angular framework and Firebase as the backend. It provides real-time communication capabilities, allowing users to send and receive messages in a chat interface. Angular is used for the frontend development, providing a responsive and interactive user interface, while Firebase handles the real-time data synchronization and storage. The combination of Angular and Firebase enables seamless and efficient communication between users in the chat application.</p>
         <a href="#"><i class='bx bx-link-external' ></i></a>
     </div>
 </div>
 <div class="portfolio-box">
     <img src="../../assets/portfolio4.jpg" alt="">
     <div class="portfolio-layer">
-        <h4>Web Design</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit nostrum totam hic temporibus iusto, iste animi exercitationem voluptatibus, tempore in quasi accusamus perferendis rerum laboriosam quae tempora ducimus eaque?</p>
+        <h4>D'Profile</h4>
+        <p>The D'Profile project was undertaken at DESPA TECHNOLOGY PVT LTD, where I served as a Full-Stack Developer. The application was developed using Angular as the frontend framework, providing a robust and interactive user interface. For the backend, MSSQL was utilized as the database management system, and a Web-API was implemented to handle the server-side logic and facilitate data communication. This combination of Angular, MSSQL, and Web-API ensured a seamless and efficient user experience in the D'Profile project.</p>
         <a href="#"><i class='bx bx-link-external' ></i></a>
     </div>
 </div>
@@ -22,36 +68,51 @@
 <div class="portfolio-box">
     <img src="../../assets/portfolio2.jpg" alt="">
     <div class="portfolio-layer">
-        <h4>Web Design</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit nostrum totam hic temporibus iusto, iste animi exercitationem voluptatibus, tempore in quasi accusamus perferendis rerum laboriosam quae tempora ducimus eaque?</p>
+        <h4>Document Deneration</h4>
+        <p>The Document Generation project was a custom solution designed and developed by me for a client.
+             The objective of the project was to create a system that automates the generation of documents.
+              Angular was chosen as the frontend framework, providing customize document templates. 
+              For the backend, MSSQL was used as the database management system.
+               The integration of Angular and MSSQL facilitated efficient data retrieval and processing, 
+               enabling the system to dynamically generate.</p>
         <a href="#"><i class='bx bx-link-external' ></i></a>
     </div>
 </div>
 <div class="portfolio-box">
     <img src="../../assets/portfolio4.jpg" alt="">
     <div class="portfolio-layer">
-        <h4>Web Design</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit nostrum totam hic temporibus iusto, iste animi exercitationem voluptatibus, tempore in quasi accusamus perferendis rerum laboriosam quae tempora ducimus eaque?</p>
-        <a href="#"><i class='bx bx-link-external' ></i></a>
+        <h4>Portfolio Website</h4>
+        <p>The Portfolio Design project is a web application created using Angular, HTML, CSS, and Bootstrap. 
+            Angular is used as the frontend framework to provide a modular and scalable structure to the application.
+             HTML is used to define the markup and structure of the portfolio pages, while CSS is employed for styling 
+             and layout customization. Bootstrap, a popular CSS framework, is utilized for responsive design, grid systems, 
+             and pre-built components that enhance the visual appeal and responsiveness of the portfolio. 
+            </p>
+        <a href="https://velvety-florentine-6ea882.netlify.app/"><i class='bx bx-link-external' ></i></a>
     </div>
 </div>
 
 <div class="portfolio-box">
     <img src="../../assets/portfolio3.jpg" alt="">
     <div class="portfolio-layer">
-        <h4>Web Design</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit nostrum totam hic temporibus iusto, iste animi exercitationem voluptatibus, tempore in quasi accusamus perferendis rerum laboriosam quae tempora ducimus eaque?</p>
+        <h4>MSM Unify</h4>
+        <p>
+            The MSM Unify Portal is a live project I worked on as an Angular developer at MSM Pvt Ltd. 
+            The portal was designed to provide student admission to out of Indian University, and streamline communication
+             with the organization. Using Angular as the frontend framework, I developed responsive and interactive components, 
+             implemented data integration with backend APIs, and ensured seamless navigation and user experience.
+             The MSM Unify Portal serves as an essential tool for student, collaboration across different departments within the organization.</p>
         <a href="#"><i class='bx bx-link-external' ></i></a>
     </div>
 </div>
 
-<div class="portfolio-box">
+<!-- <div class="portfolio-box">
     <img src="../../assets/portfolio4.jpg" alt="">
     <div class="portfolio-layer">
         <h4>Web Design</h4>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere odit nostrum totam hic temporibus iusto, iste animi exercitationem voluptatibus, tempore in quasi accusamus perferendis rerum laboriosam quae tempora ducimus eaque?</p>
         <a href="#"><i class='bx bx-link-external' ></i></a>
     </div>
-</div>
+</div> -->
 </div>
 </section>

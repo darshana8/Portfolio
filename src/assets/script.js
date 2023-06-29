@@ -21,6 +21,16 @@ window.onscroll = () => {
 
 
 
+// typed js
+
+var typed = new Typed('.multiple-text',{
+    string:['F','A'],
+    typeSpeed:100,
+    backSpeed:100,
+    backDelay:100,
+    loop:true
+})
+
 
 
       // toggle icon

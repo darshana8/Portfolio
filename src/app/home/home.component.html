@@ -41,34 +41,34 @@
             <a class= "navbar" routerLink="contact">Contact</a>
         </button>
         <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
-          <mat-icon>more_vert</mat-icon>
+          <mat-icon style="color: white;">more_vert</mat-icon>
         </button>
-        <mat-menu #dropMenu="matMenu">
-          <ng-container>
-            <button mat-menu-item>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" routerLink=" ">
-                </mat-icon>
-                    <a  class= "navbar" routerLink=" "style="color: black;font-weight: 700;border: groove">Home</a>
+        <mat-menu #dropMenu="matMenu"  style="border: 1px solid red;">
+          <ng-container >
+            <button mat-menu-item >
+                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home" routerLink=" "> -->
+                <!-- </mat-icon> -->
+                    <a  class= "navbar" routerLink=" "style="color: black;font-weight: 700;">Home</a>
             </button>
             <button mat-menu-item>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="help" routerLink="about"></mat-icon>
+                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="help" routerLink="about"></mat-icon> -->
                     <a  class= "navbar" routerLink="about"style="color: black;font-weight: 700;">About</a>
             </button>
 
             <button mat-menu-item>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="how_to_reg" routerLink="services"></mat-icon>
+                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="how_to_reg" routerLink="services"></mat-icon> -->
                     <a  class= "navbar" routerLink="services"style="color: black;font-weight: 700;">Services</a>
             </button>
 
             
 
             <button mat-menu-item>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person_pin" routerLink="portfolio"></mat-icon>
+                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person_pin" routerLink="portfolio"></mat-icon> -->
                     <a  class= "navbar" routerLink="portfolio" style="color: black;font-weight: 700;">Portfolio</a>
             </button>
 
             <button mat-menu-item>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="contacts" routerLink="contact"></mat-icon>
+                <!-- <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="contacts" routerLink="contact"></mat-icon> -->
                     <a  class= "navbar" routerLink="contact" style="color: black;font-weight: 700;">Contact</a>
             </button>
             <mat-divider></mat-divider>
@@ -78,22 +78,39 @@
 
     <!-- home section design -->
 
-    <section class="home" id="home">
-        <div class="home-content">
+    <section class="home " id="home">
+        <div class="home-content animate__animated animate__fadeInDown">
             <h3>Hello,It's Me</h3>
-            <h1>Darshana Deshpande</h1>
-            <h3>And I'm a <span>Angular Developer</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate illum doloribus tenetur nisi praesentium. Vero iste eum quis non omnis sint in laborum alias, soluta qui harum? Deserunt, sunt harum.</p>
+            <h1 class="animate__animated animate__fadeInLeft">Darshana Deshpande</h1>
+            <h3> <span class="multi-text">
+                <div class="wrapper">
+                    <div class="static-txt h3">And I'm a</div>
+                    <ul class="dynamic-txts">
+                      <li><span>Angular Developer</span></li>
+                      <li><span>Frontend Developer</span></li>
+                      <li><span>Full-Stack Developer</span></li>
+                      <li><span>Web Developer</span></li>
+                    </ul>
+                  </div>
+            </span></h3>
+
+            
+
+            <p class="animate__animated animate__fadeInRight">I have two years of experience as an Developer and Analyst in IT industry. As an experienced
+                professional, I want to highlight my skills in Angular 11+, SQL, JavaScript, Typescript, SSMS, Database,
+                Nodejs, MySql, Store Procedure and responsive Web Design. 
+                </p>
             <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-gmail' ></i></a> 
+                <a href="www.linkedin.com/in/darshana-deshpande-055b271b1"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:darshanadeshpande08@gmail.com"><i class='bx bxl-gmail' ></i></a> 
+                <a href="tel:7558283319"><i class='bx bx-phone-call'></i></a> 
                 <!-- <a href="#"></a>
                 <a href="#"></a> -->
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="https://drive.google.com/file/d/1rlPuYT0kf88G5ySWFjqbk_2d8S0NmdmD/view?usp=sharing" class="btn" download="Darshana_Deshpande Resume">Download CV</a>
         </div>
 
-        <div class="home-img">
+        <div class="home-img animate__animated animate__fadeInUp">
             <img src="../../assets/home.png" alt="">
         </div>
     </section>
