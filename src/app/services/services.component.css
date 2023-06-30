@@ -112,9 +112,10 @@ span{
     font-size: 2.6rem;
 }
 
-.services-box p{
+.services-box .p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+    list-style:none
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
